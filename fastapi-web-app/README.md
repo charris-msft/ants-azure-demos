@@ -11,6 +11,5 @@
 ```console
 az group create -l australiaeast -n fastapi-demo
 az appservice plan create -g fastapi-demo -n fastapi-plan --is-linux --sku P1V2 --location australiaeast
-az webapp create -g fastapi-demo -n fastapi-web -p fastapi-plan --runtime "python|3.8"
-az webapp config set --startup-file "startup.sh" -g fastapi-demo -n fastapi-web
+az webapp create -g fastapi-demo -n fastapi-web -p fastapi-plan --runtime "python|3.8" --startup-file "startup.sh"
 ```
